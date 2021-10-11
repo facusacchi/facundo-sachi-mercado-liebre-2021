@@ -1,0 +1,59 @@
+.main-form {
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+    align-items: start;
+}
+
+.standard-input-container {
+    margin: 5px;
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin: 0.5rem;
+}
+
+.out {
+    border-style: outset;
+}
+
+.radio-group, .checkboxes-group {
+    width: 100%;
+    margin: 0.5rem 0
+}
+
+.radio-group {
+    display: flex;
+    justify-content: space-around;
+}
+
+.checkboxes-group {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.chbx {
+    display: flex;
+    width: 40%;
+    margin: 0.5em;
+}
+
+.input-chbx {
+    margin: 3px;
+}
+
+.buttons {
+    flex-direction: column;
+}
+
+.submit {
+    background-color: var(--secondary-blue)
+}
+
+.reset {
+    background-color: rgb(236 6 6 / 99%);
+}
+
+.submit, .reset {
+    width: 100%;
+}

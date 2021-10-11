@@ -1,0 +1,46 @@
+
+html {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('../images/things-yellow.PNG');
+}
+
+label {
+    font-weight: bold;
+    border-color: var(--secondary-blue);
+}
+
+.submit {
+    background-color: var(--secondary-blue)
+}
+
+.main-form {
+    display: flex;
+    flex-direction: column;
+    margin: 50% auto;
+    width: 20rem;
+    height: 20rem;
+    padding: 1rem;
+    justify-content: space-evenly;
+    border-radius: 10%;
+    box-shadow: 12px 24px 48px rgb(0 0 0 / 50%);
+    opacity: 100%;
+    background-color: white;
+}
+
+.container-input {
+    margin: 5px;
+    width: 95%;
+}
+
+.standard-input-login {
+    height: 40px;
+    border-color: var(--secondary-blue);
+    border-radius: 5%;
+}
+
+.login-title {
+    text-align: center;
+    color: var(--secondary-blue);
+}

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="css/general-styles.css">
+    <link rel="stylesheet" href="css/register.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    rel="stylesheet"/>
+</head>
+<body>
+    <header>
+        <article>
+            <div class='logo-search'>
+                <img class='img-logo' src="images/logo-mercado-liebre.svg" alt="imagen de logo de pagina">
+                <div>
+                    <input class='search' type="text" placeholder="Buscar por producto">
+                    <div class='container-icon'><i class="fas fa-search icon-search"></i></div>
+                </div>
+            </div>
+        </article>
+        <div>
+            <div class="hand-text">
+                <i class="fas fa-hand-holding-usd header-icon"></i>
+                <span class='body-text-size span-header'>Compra en cuotas sin tarjeta de credito</span>
+            </div>
+            <nav class="nav">
+                <ul class="ul-header ul-header-left">
+                    <li> <a href="#">Ofertas</a> </li>
+                    <li> <a href="#">Tiendas oficiales</a> </li>
+                    <li> <a href="#">Vender</a> </li>
+                    <li> <a href="#">Ayuda</a> </li>
+                </ul>
+                <ul class="ul-header ul-header-rigth">
+                    <li> <a href="/register">Crea tu cuenta</a> <i class="fas fa-user-circle header-icon"></i> </li>
+                    <li> <a href="#">Ingresa</a> <i class="fas fa-sign-in-alt header-icon"></i> </li>
+                    <li> <a href="#">Mis compras</a> <i class="fas fa-shopping-basket header-icon"></i> </li>
+                </ul>
+            </nav>
+            <div class='button-container'>
+                <button class='button-hamburguer'><i class="fas fa-bars"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <form action="/register" method="POST" class="main-form">
+        <div class="standard-input-container">
+            <label for="fname">Nombre</label>
+            <input class="standard-input" type="text" id="fname" name="fname" placeholder="Ingresar nombre" required minlength="3" maxlength="30">
+        </div>
+        <div class="standard-input-container">
+            <label for="lname">Apellido</label>
+            <input class="standard-input" type="text" id="lname" name="lname" placeholder="Ingresar apellido" required minlength="3" maxlength="30">
+        </div>
+        <div class="standard-input-container">
+            <label for="uname">Usuario</label>
+            <input class="standard-input" type="text" id="uname" name="uname" placeholder="Ingresar nombre de usuario" required minlength="3" maxlength="15">
+        </div>
+        <div class="standard-input-container">
+            <label for="birth">Fecha de nacimiento</label>
+            <input class="standard-input" type="date" id="birth" name="birth" placeholder="Fecha de nacimiento" required>
+        </div>
+        <div class="standard-input-container">
+            <label for="address">Domicilio</label>
+            <input class="standard-input" type="text" id="address" name="address" placeholder="Dirección de domicilio" required minlength="7" maxlength="30">
+        </div>
+        
+        <div class="standard-input-container out">
+            <label>Perfil del usuario</label>
+            <div class="radio-group">
+                <div>
+                    <input type="radio" id="buy" name="action" value="comprar">
+                    <label for="buy">Comprador</label>
+                </div>
+                <div>
+                    <input type="radio" id="sell" name="action" value="vender">
+                    <label for="sell">Vendedor</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="standard-input-container out">
+            <label>Intereses</label>
+            <div class="checkboxes-group">
+                <div class="chbx">
+                    <input class="input-chbx" type="checkbox" id="electro" name="category" value="electro">
+                    <label for="electro">Electro</label>
+                </div>
+                <div class="chbx">
+                    <input class="input-chbx" type="checkbox" id="moda" name="category" value="moda">
+                    <label for="moda">Moda</label>
+                </div>
+                <div class="chbx">
+                    <input class="input-chbx" type="checkbox" id="hogar" name="category" value="hogar">
+                    <label for="hogar">Hogar</label>
+                </div>
+                <div class="chbx">
+                    <input class="input-chbx" type="checkbox" id="jugueteria" name="category" value="jugueteria">
+                    <label for="jugueteria">Juguetería</label>
+                </div>
+                <div class="chbx">
+                    <input class="input-chbx" type="checkbox" id="healf" name="category" value="healf">
+                    <label for="healf">Vida sana</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="standard-input-container">
+            <label for="photo">Subir foto</label>
+            <input type="file" id="photo" name="photo" placeholder="Subir foto">
+        </div>
+
+        <div class="standard-input-container">
+            <label for="pssw">Contraseña</label>
+            <input class="standard-input" type="password" id="pssw" name="pssw" placeholder="Ingresar contraseña" required minlength="8" maxlength="15">
+        </div>
+        <div class="standard-input-container">
+            <label for="pssw-confirm">Confirmar contraseña</label>
+            <input class="standard-input" type="password" id="pssw-confirm" name="pssw-confirm" placeholder="Repetir contraseña" required minlength="8" maxlength="15">
+        </div>
+
+        <div class="standard-input-container buttons">
+            <button class="submit" type="submit">Enviar</button>
+            <button class="reset" type="reset">Resetear</button>
+        </div>
+    </form>
+
+    <footer>
+        <div class="footer-container-sections">
+            <section class='footer-section'>
+                <i class="fas fa-credit-card footer-icon"></i>
+                <h1 class='title-size footer-title'>Pagá con tarjeta o en efectivo</h1>
+                <p class='footer-ph'>
+                    Con Mercado Liebre Cash, tenés cuotas sin interés con tarjeta o efectivo en
+                    puntos de pago. ¡Y siempre es seguro!
+                </p>
+            </section>
+            <section class='footer-section'>
+                <i class="fas fa-gift footer-icon"></i>
+                <h1 class='title-size footer-title'>Envío gratis desde $ 2.500</h1>
+                <p class='footer-ph'>
+                    Solo por estar registrad@ en Mercado Liebre tenés envíos gratis en miles de
+                    productos. Es un beneficio de Mercado Puntos.
+                </p>
+            </section>
+            <section class='footer-section'>
+                <i class="fas fa-user-shield footer-icon"></i>
+                <h1 class='title-size footer-title'>Seguridad, de principio a fin</h1>
+                <p class='footer-ph'>
+                    ¿No te gusta? ¡Devolvelo! En Mercado Liebre, no hay nada que no puedas hacer,
+                    porque estás siempre protegid@.
+                </p>
+            </section>
+        </div>
+        <span class='copyright'>Copyright © 1999-2020 MercadoLiebre S.R.L.</span>
+    </footer>
+</body>
+</html>
