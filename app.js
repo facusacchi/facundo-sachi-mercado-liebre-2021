@@ -11,7 +11,7 @@ app.listen(process.env.PORT || 5000, () => {
     console.log("Server running on port 5000");
 });
 
-app.get('/home', (req, res) => {
+app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'views/home.html'));
 });
 
@@ -24,7 +24,7 @@ app.post('/register', (req, res) => {
     res.redirect('/');
 });
 
-app.get('/', (req, res) => {
+app.get('/login', (req, res) => {
     res.sendFile(path.join(__dirname, 'views/login.html'));
 });
 
